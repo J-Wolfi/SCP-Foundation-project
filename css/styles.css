@@ -184,8 +184,8 @@ body{
             color:rgba(230, 230, 230, 1);
         }
         .form-section h1{
-            font-size: 30pt;
-            margin:0px;
+            font-size: 50pt;
+            margin:0px 0px 10px 0px;
         }
         .form-section > form{
             padding-top: 40px;
@@ -193,33 +193,44 @@ body{
         .form-section > form > .form-container{
             display:flex;
             justify-content: center;
-            gap: 10px;
+            gap: 20px;
         }
         .form-container input, .form-container textarea{
-            color:rgba(0, 0, 0, 1);
+            color:rgba(230, 230, 230, 1);
             font-size: 20px;
             background-color:rgba(200, 200, 200, 0.1);
             border-radius: 4px;
-            margin: 0px 0px 10px 0px;
+            margin: 0px 0px 20px 0px;
             border: solid rgba(220, 220, 220, 0.9) 1px;
-        }
-        .buttons input{
-            cursor: pointer; 
-        }
-        .form-section > form > .buttons{
-            gap:25px;
         }
         .form-container input{
             height: 30px;
-            width: 150px;
+            width: 250px;
+        }
+        .form-container input::placeholder, .form-container textarea::placeholder{
+            opacity:0.4;
+        }
+        .form-section > form > .buttons input{
+            cursor: pointer; 
+            width: 255px;
+            height: 40px;
+            background-color:rgba(200, 200, 200, 0.1);
+            transition: background 0.3s ease;
+        }
+        .form-section > form > .buttons input:hover{
+            background-color:rgba(200, 200, 200, 0.4);
         }
         .form-container textarea{
-            width:320px;
+            width:525px;
             height: 200px;
         }
         .form-container *:focus{
             outline: solid rgba(255, 255, 255, 0.6) 0.5px;
             border: solid rgba(255, 255, 255, 0.6) 0.5px;
+            background-color:rgba(200, 200, 200, 0.2);
+        }
+        .form-container input:focus::placeholder, .form-container textarea:focus::placeholder {
+            opacity:1;
         }
     /* 2.3 end */
 
