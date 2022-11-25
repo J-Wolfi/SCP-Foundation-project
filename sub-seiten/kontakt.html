@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Wolfmeir_Zierhut">
+    <title>SCP-Projekt</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo_cut.svg">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="nav">
+            <ul>
+                <li class="logo nav-element">
+                    <a tabindex="1" href="#">
+                        <img src="../img/logo.svg" alt="Logo">
+                    </a>    
+                </li>
+                <li class="nav-element link">
+                    <a tabindex="2" href="#">
+                        a
+                    </a>
+                    <a tabindex="3" href="#">
+                        Info
+                    </a>
+                    <a tabindex="4" href="#">
+                        Kontakt
+                    </a>
+                </li>
+                <li class="menubar nav-element">
+                    <svg id="icon" class="icon" viewBox="0 0 35 30">
+                        <rect class="cls-1 rect-top" y="0" width="35" height="4" rx="2" ry="2"/>
+                        <rect class="cls-1 rect-bottom" x="0" y="24" width="35" height="4" rx="2" ry="2"/>
+                        <rect class="cls-1 rect-center" y="12" width="35" height="4" rx="2" ry="2"/>
+                    </svg>
+                    <div id="side-menu" class="side-menu font1">
+                        <a href="#">SCP's</a>
+                        <a href="#">Mitarbeiter</a>
+                        <a href="#">Abteilungen</a>
+                        <a href="#">Kontakt</a>
+                        <a href="#">Über die Foundation</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <section class="form-section font1">
+                <form method="post" action="#">
+                    <div class="form-container"><h1>Kontakt</h1></div>
+                    <div class="form-container">
+                        <input type="text" id="form-1-fname" name="fname" placeholder="Vorname">
+                        <input type="text" id="form-1-lname" name="lname" placeholder="Nachname">    
+                    </div>
+                    <div class="form-container">
+                        <input type="text" id="form-1-mobile" name="mobile" placeholder="Telefon-Nr">
+                        <input type="text" id="form-1-mail" name="mail" placeholder="Mail-Adresse">    
+                    </div>
+                    <div class="form-container">
+                        <textarea name="textarea" id="textarea" placeholder="Nachricht"></textarea>
+                    </div>
+                    <div class="form-container buttons">
+                        <input type="submit" value="Absenden">
+                        <input type="reset" value="Zurücksetzen">
+                    </div>
+                </form>
+            </section>
+            <footer class="font1">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h2>Über die Foundation</h2>
+                        <div class="footer-links">
+                            <a href="#">Abteilungen</a> 
+                            <a href="#">Mitarbeiter</a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">
+                            <span>Impressum</span>
+                        </a>
+                        <a href="#">
+                            <span>Datenschutz</span>
+                        </a>
+                        <a href="#">
+                            <span>Kontakt</span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    </div>
+    <script src="../functions/functions.js"></script>
+</body>
+</html>
