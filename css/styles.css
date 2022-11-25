@@ -318,7 +318,6 @@ body{
 
 }
 @media screen and (max-width:800px){
-
     /* 3.2 Responsive Nav Styling max-800 */
     .nav > ul > li:nth-child(2){
         display:none;

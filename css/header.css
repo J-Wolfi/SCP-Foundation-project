@@ -122,3 +122,36 @@ transform: scale(103%);
 .nav .side-menu a::before{
     content: "> " ;
 }
+@media screen and (min-width:801px){
+
+    /* 3.1 Responsive Nav Styling min-800*/
+    .nav > ul > .menubar{
+        display:none;
+    }
+    .nav > ul > .nav-element{
+        justify-content: flex-end;
+    }
+    /* 3.1 end */
+
+}
+@media screen and (max-width:800px){
+    /* 3.2 Responsive Nav Styling max-800 */
+    .nav > ul > li:nth-child(2){
+        display:none;
+    }
+    .nav > ul > .menubar > .icon{
+        width:35px;
+        height:30px;
+        cursor:pointer;
+    }
+    .nav > ul > .menubar > .active > .rect-top{
+        transform:rotate(45deg)translate(5px,-4px);
+    }
+    .nav > ul > .menubar > .active > .rect-bottom{
+        transform:rotate(-45deg)translate(-16px,-4px);
+    }
+    .nav > ul > .menubar > .active > .rect-center{
+        opacity:0;
+    }
+    /* 3.2 end */ 
+}
