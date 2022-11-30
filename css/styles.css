@@ -137,7 +137,7 @@ body{
         list-style: none;
         text-align: right;
         top:60px;
-        height:calc(100vh - 60px -101px);
+        height:calc(100vh - 60px - 101px);
         width:100vw;
         right:0px;
         transform: translateX(110vw);
