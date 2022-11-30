@@ -218,7 +218,7 @@ body{
         }
         .form-container input::placeholder, .form-container textarea::placeholder{
             opacity:0.8;
-            background-color:rgba(230, 230, 230, 1);
+            color:rgba(230, 230, 230, 1);
         }
         .form-section > form > .buttons input{
             cursor: pointer; 
