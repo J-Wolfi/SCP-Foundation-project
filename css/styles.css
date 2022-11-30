@@ -141,13 +141,15 @@ body{
         text-align: right;
         top:60px;
         height:calc(100vh - 60px - 101px);
-        width:0vw;
+        width:100vw;
         right:0px;
         transform: translateX(110vw);
         background-color:var(--whitecolor-04);
         border-top:solid rgba(210, 210, 210, 1) 1px;
         padding: 0px 5vw;
         transition: width 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay
+        Display none & Flex below */
     }
     .nav .menubar .active + .side-menu{
         visibility:visible;
