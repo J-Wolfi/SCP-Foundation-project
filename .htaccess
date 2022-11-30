@@ -1,4 +1,4 @@
 AuthName "Login Section"
 AuthType Basic
-AuthUserFile \xampp\htdocs\MTSP\SCP-Foundation-project/.htpasswd
+AuthUserFile SCP-Foundation-project/.htpasswd
 require valid-user
