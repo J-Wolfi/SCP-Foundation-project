@@ -162,6 +162,9 @@ body{
     .nav .side-menu a::before{
         content: "> " ;
     }
+    .no-click section{
+        pointer-events: none;
+    }
     /* 2.1 end */
 
     /* 2.2 Styling Content */
