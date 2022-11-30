@@ -218,6 +218,7 @@ body{
         }
         .form-container input::placeholder, .form-container textarea::placeholder{
             opacity:0.8;
+            color:rgba(230, 230, 230, 1);
         }
         .form-section > form > .buttons input{
             cursor: pointer; 
@@ -237,6 +238,7 @@ body{
             outline: solid rgba(255, 255, 255, 0.6) 0.5px;
             border: solid rgba(255, 255, 255, 0.6) 0.5px;
             background-color:rgba(200, 200, 200, 0.2);
+            color:rgba(250, 250, 250, 1);
         }
         .form-container input:focus::placeholder, .form-container textarea:focus::placeholder {
             opacity:1;
