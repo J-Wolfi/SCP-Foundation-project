@@ -172,8 +172,8 @@ body{
 
     /* 2.2 Styling Content */
     .content{
-        height:calc(100vh - 60px);
-        width:100vw;
+        height:calc(100% - 60px);
+        width:100%;
         z-index: -1;
         overflow-y:scroll;
     }
