@@ -217,7 +217,7 @@ body{
             width: 250px;
         }
         .form-container input::placeholder, .form-container textarea::placeholder{
-            opacity:0.6;
+            opacity:0.8;
         }
         .form-section > form > .buttons input{
             cursor: pointer; 
