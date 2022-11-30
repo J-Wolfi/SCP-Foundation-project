@@ -241,6 +241,8 @@ body{
         }
         .form-container input:focus::placeholder, 
         .form-container textarea:focus::placeholder,
+        .form-container input:hover::placeholder, 
+        .form-container textarea:hover::placeholder,
         .buttons input:focus,
         .buttons input:hover{
             opacity:1;
