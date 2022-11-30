@@ -1,4 +1,4 @@
 AuthName "Login Section"
 AuthType Basic
-AuthUserFile j-wolfi.github.io/SCP-Foundation-project/.htpasswd
+AuthUserFile J-Wolfi/SCP-Foundation-project/.htpasswd
 require valid-user
