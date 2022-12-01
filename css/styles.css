@@ -137,8 +137,6 @@ body{
         position:absolute;
         top:60px;
         height:calc(100vh - 60px - 101px);
-        background-color:var(--whitecolor-04);
-        border-top:solid rgba(210, 210, 210, 1) 1px;
         width:100vw;
         right:0px;
     }
@@ -147,7 +145,9 @@ body{
         display:flex;
         flex-direction: column;
         list-style: none;
-        text-align: center;       
+        text-align: center; 
+        background-color:var(--whitecolor-04);
+        border-top:solid rgba(210, 210, 210, 1) 1px;      
         transition: width 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
         /* https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay
         Display none & Flex below */
