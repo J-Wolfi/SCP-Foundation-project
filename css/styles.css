@@ -227,7 +227,8 @@ body{
             background-color:rgba(200, 200, 200, 0.1);
             transition: background 0.3s ease;
         }
-        .form-section > form > .buttons input:hover{
+        .form-section > form > .buttons input:hover, 
+        .form-section > form > .buttons input:focus{
             background-color:rgba(200, 200, 200, 0.4);
         }
         .form-container textarea{
