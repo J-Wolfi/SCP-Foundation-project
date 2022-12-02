@@ -133,14 +133,6 @@ body{
         transition:transform 0.3s ease, opacity 0.1s ease-in;
     }
     .nav .side-menu{
-        overflow:hidden;
-        position:absolute;
-        top:60px;
-        height:calc(100vh - 60px - 101px);
-        width:100vw;
-        right:0px;
-    }
-    .nav .side-menu{
         visibility:hidden;
         white-space: nowrap;
         overflow:hidden;
