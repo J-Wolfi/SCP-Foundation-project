@@ -251,7 +251,7 @@ body{
         flex-direction: row;
         justify-content: space-between;
         height: 100px;
-        margin: 0px 5vw;
+        padding: 10px 5vw;
     }
     .footer-content .footer-links, .footer-content .footer-info{
         display:flex;
@@ -305,9 +305,6 @@ body{
         }
         .footer-content .footer-info .footer-links{
             height:100%;
-        }
-        .footer-content .footer-info .footer-links{
-            padding: 0px 50px 0px 0px; 
         }
         .footer-content .footer-info .footer-links > a::before{
             padding: 0px 0px 0px 0px; 
