@@ -95,6 +95,7 @@ body{
     .nav, footer{
         width:100vw;
         background-color:var(--whitecolor-06);
+        box-shadow: rgb(0 0 0 / 50%) 0px 0px 10px 1px;
     }
     footer{
         min-height:60px;
