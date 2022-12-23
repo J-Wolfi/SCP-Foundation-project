@@ -10,7 +10,6 @@ icon.addEventListener('click', function(){
         content.classList.add('no-click');
     } 
 });
-
 window.addEventListener("resize", function() {
     if(icon.classList.contains('active')){
         icon.classList.remove('active');
