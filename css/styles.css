@@ -322,6 +322,11 @@ body{
         }
         /* 2.4.2 end */
     /* 2.4 end */
+    /* 2.5 Styling banner section */
+        .banner .banner-content{
+            background-color:rgba(0,0,0,0.8)
+        }
+    /* 2.5 end */
 /* 2.0 end */
 /* 3.0 Responsive Styling */
 @media screen and (min-width:801px){
