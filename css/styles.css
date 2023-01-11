@@ -2,10 +2,23 @@
 @font-face { 
     font-family: "Bauhaus"; 
     src: url(../font/bauhaus_font/BauhausRegular.ttf); 
+}@font-face{
+    font-family: "Roboto"; 
+    src:url(../font/roboto_font/Roboto-Light.ttf)
 }
 .font1 *{
     font-family: "Bauhaus";
     font-weight: 400;
+}
+.font2{
+    font-family: "Roboto";
+    font-weight: 400;
+}
+.white-bg{
+    background-color: var(--whitecolor-06)!important;
+}
+h1{
+    margin:0px;
 }
 /* 1.0 ====== */
 
@@ -41,39 +54,6 @@ body{
     .nav *:focus{
         outline: none;
     }
-        /* 2.1.1 Underline Link animation */
-        .nav .link > a::after, 
-        .nav .menubar .side-menu > a::after{
-            content: '';
-            position: absolute;
-            bottom: 3px;
-            left: 0;
-            width: 100%;
-            height: 1.5px;
-            background-color: rgba(0, 0, 0, 0.7);
-            opacity: 0;
-            transition: opacity 150ms, transform 150ms;
-        }
-        .nav .link > a:hover::after,
-        .nav .link > a:focus::after,
-        .nav .menubar .side-menu > a:hover::after,
-        .nav .menubar .side-menu > a:focus::after {
-            opacity: 1;
-            transform: translate3d(0, 0.02em, 0);
-        }
-        .nav .menubar .side-menu > a::after {
-            opacity: 1;
-            transform: scale(0);
-            transform-origin: center;
-        }
-
-        .nav .link > a:hover::after,
-        .nav .link > a:focus::after,
-        .nav .menubar .side-menu > a:hover::after,
-        .nav .menubar .side-menu > a:focus::after{
-            transform: scale(1);   
-        }
-        /* 2.1.1 end */
 
     .nav{
         min-height:60px;
@@ -133,37 +113,56 @@ body{
     .nav > ul > .menubar > .icon > *{
         transition:transform 0.3s ease, opacity 0.1s ease-in;
     }
-    .nav .side-menu{
+    .nav .side-menu, .nav .side-menu-footer{
         visibility:hidden;
-        white-space: nowrap;
+        position: absolute;
+        right:0px;
+        width:0vw;
         overflow:hidden;
-        position:absolute;
+        white-space: nowrap;
+        transform:translateX(100%);
+        transition:width 0.3s ease 0.3s, visibility 0.3s ease, transform 0.3s ease;
+    }
+    .nav .side-menu{
+        top:60px;     
         display:flex;
         flex-direction: column;
-        list-style: none;
-        text-align: right;
-        top:60px;
-        height:calc(100vh - 60px - 121px);
-        width:0vw;
-        right:0px;
+        justify-content:center;
+        height:calc(100vh - 60px - 141px);
         background-color:var(--whitecolor-04);
         border-top:solid rgba(210, 210, 210, 1) 1px;
-        transition: width 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     }
-    .nav .menubar .active + .side-menu{
+    .nav .side-menu-footer{
+        bottom:0;
+    }
+    .nav .menubar .active ~ *{
         visibility:visible;
         width:100vw;
+        transform:translateX(0);
+        transition: width 0.3s ease, visibility 0.3s ease, transform 0.3s ease; 
     }
     .nav .side-menu a{
-        margin: 5px 5vw 5px auto;
+        margin: 5px auto 5px auto;
+        width: 250px;
+        text-align: center;
         color:black;
         text-decoration: none;
         font-size: 22pt;
         font-family: "Bauhaus";
         position:relative;
+        transition: width 0.3s ease;
     }
     .nav .side-menu a::before{
         content: "> " ;
+        float:left;
+    }
+    .nav .side-menu a::after{
+        content: " <" ;
+        float:right;
+    }
+    .nav .side-menu a:hover{
+        color:rgba(0, 0, 0, 0.7);
+        width:240px;
     }
     .no-click section{
         pointer-events: none;
@@ -180,13 +179,93 @@ body{
     .section{
         background-color: var(--contentcolor);
         margin:0px auto;
-        height: 100%;
+        min-height: calc(100vh - 60px);
+        height: calc(100vh - 60px);
         color:rgba(230, 230, 230, 1);
         overflow-y: scroll;
         transition: width 0.3s ease;
     }
     /* 2.2 end */
+    /* Styling banner section */
+        .banner .banner-content{
+            color: rgba(230, 230, 230, 1);
+            display:flex;
+            height:100%;
+            justify-content: center;
+        }
+        .banner .banner-content h1{
+            text-align:center;
+            font-size:100px;
+            margin:0px 0px 0px 0px;
+        }
+        .banner .banner-content .center{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
+
+    /* =========== */
+    /* Styling button section */
+        .section-content{
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sub-site-buttons{
+            display:flex;
+            flex-direction: row; 
+            justify-content: space-evenly;
+            padding:0px;
+        }
+        .sub-site-buttons .card{
+            text-align: center;
+            list-style: none;
+            width:30vw;
+            height: 60vh;
+            border:solid black 1px;
+            border-radius: 20px;
+            color:black;
+        }
+        .sub-site-buttons .card a{
+            text-decoration: none;
+            color:black;
+            border-radius:50%;
+        }
+        .sub-site-buttons .card a::before{
+            content: "\00BB";
+            font-size: 50pt;
+            padding-left:20%;
+            float:left;
+        }
+        .sub-site-buttons .card a::after{
+            content: "\00AB";
+            font-size: 50pt;
+            padding-right:20%;
+            float:right;
+        }
+        .sub-site-buttons .card .card-content{
+            padding:10%;
+            display:flex;
+            flex-direction: column;
+            height:calc(100% - 15%);
+        }
+        .sub-site-buttons .card h1{
+            font-size: 38pt;
+        }
+        .sub-site-buttons .card img{
+            height:50px;
+            width:50px;
+            margin:20px auto 20px auto;
+        }
+        .sub-site-buttons .card p{
+            margin:auto 0px;
+            font-size: 20pt;
+            font-family: "Roboto";
+            
+        }
+    /* ================ */
     /* 2.3 Styling Form Section ===*/
         .form-section h1{
             font-size: 50pt;
@@ -248,17 +327,36 @@ body{
     /* 2.4 Styling Footer */
     .footer-content{
         display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 100px;
-        padding: 10px 5vw;
+        flex-direction: column;
+        justify-content: center;
+        height: 140px;
     }
-    .footer-content .footer-links, .footer-content .footer-info{
+    .footer-content .footer-logo{
         display:flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
     }
-    .footer-content .footer-links a, .footer-content .footer-info a{
+    .footer-content .footer-logo img{
+        height:45px;
+        width:45px;
+        margin: 0px auto 10px auto;
+    }
+    .footer-content .line-horizontal{
+        height:1px;
+        max-width:60vw;
+        min-width:240px;
+        width:60vw;
+        background-color:black;
+        margin: 0px auto 10px auto;
+    }
+    .footer-content .footer-links{
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 180px;
+        margin: 0px auto;
+    }
+    .footer-content .footer-links a{
         color: var(--fontcolor);
         text-decoration: none;
         cursor: pointer;
@@ -298,35 +396,8 @@ body{
             padding: 0px 5px 0px 15px;
         }
         /* 2.4.1 end */
-
-        /* 2.4.2 Styling Footer info*/
-        .footer-content .footer-info h2{
-            margin:0px;
-        }
-        .footer-content .footer-info .footer-links{
-            height:100%;
-        }
-        .footer-content .footer-info .footer-links > a::before{
-            padding: 0px 0px 0px 0px; 
-        }
-        .footer-content .footer-info .footer-links > a::after{
-            padding: 0px 0px 0px 0px;
-        }
-        .footer-content .footer-info .footer-links > a:hover::before, 
-        .footer-content .footer-info .footer-links > a:focus::before{
-            padding: 0px 0px 0px 5px; 
-        }
-        .footer-content .footer-info .footer-links > a:hover::after,
-        .footer-content .footer-info .footer-links > a:focus::after{
-            padding: 0px 5px 0px 0px;
-        }
-        /* 2.4.2 end */
     /* 2.4 end */
-    /* 2.5 Styling banner section */
-        .banner .banner-content{
-            background-color:rgba(0,0,0,0.8)
-        }
-    /* 2.5 end */
+    
 /* 2.0 end */
 /* 3.0 Responsive Styling */
 @media screen and (min-width:801px){
@@ -340,6 +411,40 @@ body{
     }
     /* 3.1 end */
 
+}
+@media screen and (max-width:1110px){
+    /* Styling button section (2) */
+    .sub-site-buttons .card h1{
+        font-size: 32pt;
+    }
+/* ================ */
+}
+@media screen and (max-width:935px){
+    /* Styling button section (3) */
+    .sub-site-buttons .card h1{
+        font-size: 28pt;
+    }
+    .sub-site-buttons .card img{
+        height:45px;
+        width:45px;
+    }
+    /* ================ */
+}
+@media screen and (max-width:830px){
+    /* Styling button section (3) */
+    .sub-site-buttons .card h1{
+        font-size: 24pt;
+    }
+    .sub-site-buttons .card img{
+        height:40px;
+        width:40px;
+    }
+    .sub-site-buttons .card p{
+        margin:auto 0px;
+        font-size: 18pt; 
+    }
+
+    /* ================ */
 }
 @media screen and (max-width:800px){
     /* 3.2 Responsive Nav Styling max-800 */
