@@ -7,6 +7,7 @@ icon.addEventListener('click', function(){
     } 
     else {
         icon.classList.add('active');
+        window.scrollY()
         content.classList.add('no-click');
     } 
 });
