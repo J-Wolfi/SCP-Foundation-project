@@ -1,0 +1,27 @@
+body{
+    margin: 0px 20% 0px 20%;
+}
+h1{
+    font-size: 18pt;
+}
+h2{
+    font-size: 14pt;
+}
+p, li, a{
+    font-size: 10pt;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        margin: 0px 10% 0px 10%;
+    }
+    h1{
+        font-size: 16pt;
+    }
+    h2{
+        font-size: 12pt;
+    }
+    p, li, a{
+        font-size: 8pt;
+    }
+}
