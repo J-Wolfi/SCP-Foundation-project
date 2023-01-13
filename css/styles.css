@@ -208,7 +208,7 @@ body{
     /* =========== */
     /* Styling button section */
         .section-content{
-            height:100%;
+            min-height: calc(100vh - 60px);
             display:flex;
             flex-direction: column;
             justify-content: center;
@@ -232,23 +232,29 @@ body{
             text-decoration: none;
             color:black;
             border-radius:50%;
+            display:flex;
+            justify-content: center;
         }
-        .sub-site-buttons .card a::before{
+        .sub-site-buttons .card a .image-container{
+            min-width: 260px;
+            width: 300px;
+        }
+        .sub-site-buttons .card .image-container::before{
             content: "\00BB";
             font-size: 50pt;
             padding-left:20%;
             float:left;
         }
-        .sub-site-buttons .card a::after{
+        .sub-site-buttons .card .image-container::after{
             content: "\00AB";
             font-size: 50pt;
             padding-right:20%;
             float:right;
         }
         .sub-site-buttons .card .card-content{
-            padding:10%;
             display:flex;
             flex-direction: column;
+            justify-content: center;
             height:calc(100% - 15%);
         }
         .sub-site-buttons .card h1{
@@ -260,7 +266,7 @@ body{
             margin:20px auto 20px auto;
         }
         .sub-site-buttons .card p{
-            margin:auto 0px;
+            margin: 0px;
             font-size: 20pt;
             font-family: "Roboto";
             
@@ -421,29 +427,42 @@ body{
 }
 @media screen and (max-width:935px){
     /* Styling button section (3) */
-    .sub-site-buttons .card h1{
-        font-size: 28pt;
+    .card-section{
+        height:220%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
     }
-    .sub-site-buttons .card img{
-        height:45px;
-        width:45px;
+    .section-content {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    .sub-site-buttons{
+        flex-direction: column; 
+        justify-content: space-evenly;
+        margin:0px;
+    }
+    .sub-site-buttons .card {
+        width: 70vw;
     }
     /* ================ */
 }
-@media screen and (max-width:830px){
+@media screen and (min-width:800px) and (min-height:1100px){
     /* Styling button section (3) */
-    .sub-site-buttons .card h1{
-        font-size: 24pt;
+    .sub-site-buttons .card .card-content{
+        height:100%;
     }
-    .sub-site-buttons .card img{
-        height:40px;
-        width:40px;
+    .sub-site-buttons .card h1{
+        font-size: 48pt;
+    }
+    .sub-site-buttons .card .card-foot{
+        display:flex;
+        justify-content: center;
     }
     .sub-site-buttons .card p{
-        margin:auto 0px;
-        font-size: 18pt; 
+        max-width: 30vw;
+        font-size: 32pt;
     }
-
     /* ================ */
 }
 @media screen and (max-width:800px){
@@ -466,4 +485,40 @@ body{
         opacity:0;
     }
     /* 3.2 end */ 
+}
+@media screen and (max-width:499px){
+    .sub-site-buttons .card {
+        width: 80vw;
+        height:55vh;
+      }
+      .sub-site-buttons .card .card-content{
+        height:80%;
+      }
+      .card-section{
+        height:200%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:399px){
+    .sub-site-buttons .card h1{
+        font-size: 28pt;
+    }
+    .sub-site-buttons .card p{
+        font-size: 16pt;
+    }
+    .sub-site-buttons .card {
+        width: 90vw;
+        height:45vh;
+      }
+      .sub-site-buttons .card .card-content{
+        height:70%;
+      }
+      .card-section{
+        height:170%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
