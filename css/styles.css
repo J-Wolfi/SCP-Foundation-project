@@ -19,6 +19,10 @@
 }
 h1{
     margin:0px;
+    
+}
+h1, h2, h3, p, span{
+    transition:font-size 0.3s ease;
 }
 /* 1.0 ====== */
 
@@ -27,6 +31,7 @@ h1{
     --fontcolor: black;
     --hovercolor: rgba(0, 0, 0, 0.7);
     --contentcolor: rgba(100,100,100,0.4);
+    --whitecolor-08: rgba(255, 255, 255, 0.8);
     --whitecolor-06: rgba(255, 255, 255, 0.6);
     --whitecolor-04: rgba(255, 255, 255, 0.4);
     transition:color 0.1s ease;
@@ -129,11 +134,12 @@ body{
         flex-direction: column;
         justify-content:center;
         height:calc(100vh - 60px - 141px);
-        background-color:var(--whitecolor-04);
+        background-color:var(--whitecolor-08);
         border-top:solid rgba(210, 210, 210, 1) 1px;
     }
     .nav .side-menu-footer{
         bottom:0;
+        background-color: var(--whitecolor-06);
     }
     .nav .menubar .active ~ *{
         visibility:visible;
@@ -207,8 +213,14 @@ body{
 
     /* =========== */
     /* Styling button section */
+        .card-section{
+            min-height:500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         .section-content{
-            height:100%;
+            min-height: calc(100vh - 60px);
             display:flex;
             flex-direction: column;
             justify-content: center;
@@ -224,6 +236,7 @@ body{
             list-style: none;
             width:30vw;
             height: 60vh;
+            min-height:360px;
             border:solid black 1px;
             border-radius: 20px;
             color:black;
@@ -232,24 +245,31 @@ body{
             text-decoration: none;
             color:black;
             border-radius:50%;
+            display:flex;
+            justify-content: center;
         }
-        .sub-site-buttons .card a::before{
+        .sub-site-buttons .card a .image-container{
+            min-width: 260px;
+            width: 300px;
+        }
+        .sub-site-buttons .card .image-container::before{
             content: "\00BB";
             font-size: 50pt;
             padding-left:20%;
             float:left;
         }
-        .sub-site-buttons .card a::after{
+        .sub-site-buttons .card .image-container::after{
             content: "\00AB";
             font-size: 50pt;
             padding-right:20%;
             float:right;
         }
         .sub-site-buttons .card .card-content{
-            padding:10%;
             display:flex;
             flex-direction: column;
-            height:calc(100% - 15%);
+            justify-content: center;
+            height:60vh;
+            min-height:360px;
         }
         .sub-site-buttons .card h1{
             font-size: 38pt;
@@ -259,8 +279,13 @@ body{
             width:50px;
             margin:20px auto 20px auto;
         }
+        .sub-site-buttons .card .card-foot{
+            display: flex;
+            justify-content: center;
+        }
         .sub-site-buttons .card p{
-            margin:auto 0px;
+            margin: 20px;
+            max-width:400px;
             font-size: 20pt;
             font-family: "Roboto";
             
@@ -421,29 +446,45 @@ body{
 }
 @media screen and (max-width:935px){
     /* Styling button section (3) */
-    .sub-site-buttons .card h1{
-        font-size: 28pt;
+    .card-section{
+        height:220%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
     }
-    .sub-site-buttons .card img{
-        height:45px;
-        width:45px;
+    .section-content {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    .sub-site-buttons{
+        flex-direction: column; 
+        justify-content: space-evenly;
+        margin:0px;
+    }
+    .sub-site-buttons .card {
+        width: 70vw;
+    }
+    .sub-site-buttons .card p{
+        max-width:300px;
     }
     /* ================ */
 }
-@media screen and (max-width:830px){
+@media screen and (min-width:800px) and (min-height:1100px){
     /* Styling button section (3) */
-    .sub-site-buttons .card h1{
-        font-size: 24pt;
+    .sub-site-buttons .card .card-content{
+        height:100%;
     }
-    .sub-site-buttons .card img{
-        height:40px;
-        width:40px;
+    .sub-site-buttons .card h1{
+        font-size: 48pt;
+    }
+    .sub-site-buttons .card .card-foot{
+        display:flex;
+        justify-content: center;
     }
     .sub-site-buttons .card p{
-        margin:auto 0px;
-        font-size: 18pt; 
+        max-width: 30vw;
+        font-size: 32pt;
     }
-
     /* ================ */
 }
 @media screen and (max-width:800px){
@@ -466,4 +507,81 @@ body{
         opacity:0;
     }
     /* 3.2 end */ 
+}
+@media screen and (max-width:750px){
+    .banner .banner-content h1{
+        font-size:6rem;
+    }
+}
+@media screen and (max-width:650px){
+    .banner .banner-content h1{
+        font-size:5rem;
+    }
+    .form-section{
+        display:flex;
+        justify-content: center;
+    }
+    .form-section .form-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-section .form-container input{
+        margin:0px auto 20px auto;
+        max-width: 300px;
+    }
+}
+@media screen and (max-width:550px){
+    .banner .banner-content h1{
+        font-size:4rem;
+    }
+}
+@media screen and (max-width:499px){
+    .sub-site-buttons .card {
+        width: 80vw;
+        height:55vh;
+        min-height:360px;
+      }
+      .sub-site-buttons .card .card-content{
+        height:55vh;
+        min-height:360px;
+      }
+      .card-section{
+        height:200%;
+        min-height:1200px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width:450px){
+    .banner .banner-content h1{
+        font-size:3rem;
+    }
+}
+@media screen and (max-width:399px){
+    .sub-site-buttons .card h1{
+        font-size: 28pt;
+    }
+    .sub-site-buttons .card p{
+        font-size: 16pt;
+    }
+    .sub-site-buttons .card {
+        width: 90vw;
+        height:45vh;
+      }
+      .sub-site-buttons .card .card-content{
+        height:45vh;
+      }
+      .card-section{
+        height:170%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:350px){
+    .banner .banner-content h1{
+        font-size:2.5rem;
+    }
 }
