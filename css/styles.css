@@ -54,6 +54,7 @@ body{
     background-attachment: fixed;
     opacity: 95%;
     height:100vh;
+    width:100vw;
 }
     /* 2.1 Styling Nav-Bar */
     .nav *:focus{
@@ -296,8 +297,14 @@ body{
             font-size: 50pt;
             margin:0px 0px 10px 0px;
         }
+        .form-section{
+            min-height: 562px;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+        }
         .form-section > form{
-            padding-top: 40px;
+            margin:0px auto;
         }
         .form-section > form > .form-container{
             display:flex;
@@ -520,14 +527,21 @@ body{
     .form-section{
         display:flex;
         justify-content: center;
+        min-height:730px;
     }
-    .form-section .form-container{
+    .form-section form .form-container{
         flex-direction: column;
         text-align: center;
+        gap:0px;
     }
-    .form-section .form-container input{
+    .form-section form .form-container input{
         margin:0px auto 20px auto;
-        max-width: 300px;
+        width: 80vw;
+        max-width: 80vw;
+    }
+    .form-section .form-container textarea{
+        max-width: 80vw;
+        margin: 0px 10vw 20px 10vw;
     }
 }
 @media screen and (max-width:550px){
