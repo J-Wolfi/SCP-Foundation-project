@@ -15,7 +15,7 @@
         <header class="nav">
             <ul>
                 <li class="logo nav-element">
-                    <a href="#">
+                    <a href="#top">
                         <img src="img/logo.svg" alt="Logo">
                     </a> 
                 </li>
@@ -35,12 +35,14 @@
                     </svg>
                     <div id="side-menu" class="side-menu font1">
                         <a href="sub-seiten/kontakt.html">Kontakt</a>
-                        <a href="#">Info</a>
+                        <a onclick="closeMenu()" href="#about">Info</a>
                     </div>
                     <footer class="font1 side-menu-footer">
                         <div class="footer-content">
                             <div class="footer-logo">
-                                <img src="img/logo_cut.svg" alt="logo_cut">
+                                <a onclick="closeMenu()" href="#top">
+                                    <img src="img/logo_cut.svg" alt="logo_cut">
+                                </a>
                                 <div class="line-horizontal"></div>
                             </div>
                             <div class="footer-links">
@@ -57,7 +59,7 @@
             </ul>
         </header>
         <div id="content" class="content">
-            <section class="section banner font2">
+            <section id="top" class="section banner font2">
                 <div class="banner-content">
                     <div class="center">
                             <h1>Herzlich Willkommen,</h1>
@@ -109,7 +111,7 @@
                             <div class="card-content">
                                 <div class="card-head">
                                     <h1>Empty Space</h1>
-                                    <a href="#">
+                                    <a href="#bottom">
                                         <div class="image-container">
                                             <img src="img/questionmark.svg" alt="questionmark symbol">
                                         </div>    
@@ -159,10 +161,12 @@
                     </ul>
                 </div>
             </section>
-            <footer class="font1">
+            <footer id="bottom" class="font1">
                 <div class="footer-content">
                     <div class="footer-logo">
-                        <img src="img/logo_cut.svg" alt="logo_cut">
+                        <a href="#top">
+                            <img src="img/logo_cut.svg" alt="logo_cut">
+                        </a>
                         <div class="line-horizontal"></div>
                     </div>
                     <div class="footer-links">
