@@ -340,8 +340,10 @@ body{
         list-style:none;
     }
     .about-section .about-section-content .about-buttons img{
-        filter:invert(100%);
         opacity:0.8;
+        width: 30vw;
+        height:40vh;
+        min-height: 250px;
     }
     /* ================= */
     /* 2.3 Styling Form Section ===*/
@@ -558,6 +560,11 @@ body{
         width: 80vw;
         height: 70vh;
         min-height:400px;
+    }
+    .about-section .about-section-content .about-buttons img{
+        width: 80vw;
+        height:60vh;
+        min-height: 250px;
     }
 }
 @media screen and (min-width:800px) and (min-height:1100px){
