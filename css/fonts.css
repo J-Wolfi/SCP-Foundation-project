@@ -1,8 +1,0 @@
-@font-face { 
-    font-family: "Bauhaus"; 
-    src: url(../font/bauhaus_font/BauhausRegular.ttf); 
-}
-.font1 *{
-    font-family: "Bauhaus";
-    font-weight: 400;
-}
