@@ -23,7 +23,7 @@
                     <a class="current" href="#">
                         Kontakt
                     </a>
-                    <a href="#">
+                    <a href="../index.html#about">
                         Info
                     </a>
                 </li>
@@ -34,17 +34,19 @@
                         <rect class="cls-1 rect-center" y="12" width="35" height="4" rx="2" ry="2"/>
                     </svg>
                     <div id="side-menu" class="side-menu font1">
-                        <a href="#">Info</a>
-                        <a class="current" href="#">Kontakt</a>
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#about">Info</a>
                     </div>
                     <footer class="font1 side-menu-footer">
                         <div class="footer-content">
                             <div class="footer-logo">
-                                <img src="../img/logo_cut.svg" alt="logo_cut">
+                                <a onclick="closeMenu()" class="#top">
+                                    <img src="../img/logo_cut.svg" alt="logo_cut">
+                                </a>
                                 <div class="line-horizontal"></div>
                             </div>
                             <div class="footer-links">
-                                <a href="#">
+                                <a href="impressum.html">
                                     <span>Impressum</span>
                                 </a>
                                 <a href="datenschutz.html" target="_blank">
@@ -57,7 +59,7 @@
             </ul>
         </header>
         <div class="content">
-            <section class="section form-section font1">
+            <section id="top" class="section form-section font1">
                 <form method="post" action="#">
                     <div class="form-container">
                         <h1>Kontakt</h1>
@@ -79,10 +81,12 @@
                     </div>
                 </form>
             </section>
-            <footer class="font1 side-menu-footer">
+            <footer id="bottom" class="font1 side-menu-footer">
                 <div class="footer-content">
                     <div class="footer-logo">
-                        <img src="../img/logo_cut.svg" alt="logo_cut">
+                        <a href="#top">
+                            <img src="../img/logo_cut.svg" alt="logo_cut">
+                        </a>
                         <div class="line-horizontal"></div>
                     </div>
                     <div class="footer-links">
