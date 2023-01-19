@@ -1,4 +1,0 @@
-AuthName "Login Section"
-AuthType Basic
-AuthUserFile J-Wolfi/SCP-Foundation-project/.htpasswd
-require valid-user
