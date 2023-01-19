@@ -297,9 +297,53 @@ body{
             max-width:400px;
             font-size: 20pt;
             font-family: "Roboto";
-            
         }
     /* ================ */
+    /* About us styling */
+    .about-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        min-height:550px;
+    }
+    .about-section .about-section-content{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-section .about-section-content h1{
+        font-size: 60pt;
+    }
+    .about-section .about-section-content .about-buttons{
+        margin:0px;
+        padding:0px;
+        display:flex;
+        justify-content: center;
+        gap:20px;
+    }
+    .about-section .about-section-content .about-buttons .card{
+        border: solid rgba(255, 255, 255, 0.8) 1px;
+        border-radius: 10px;
+        width: 40vw;
+        height:45vh;
+        min-height:300px;
+        padding:20px 5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-section .about-section-content .about-buttons h1{
+        font-size: 30pt;
+    }
+    .about-section .about-section-content .about-buttons li{
+        list-style:none;
+    }
+    .about-section .about-section-content .about-buttons img{
+        filter:invert(100%);
+        opacity:0.8;
+    }
+    /* ================= */
     /* 2.3 Styling Form Section ===*/
         .form-section h1{
             font-size: 50pt;
@@ -502,7 +546,19 @@ body{
         max-width:300px;
     }
     /* ================ */
-
+    .about-section{
+        height: 200vh;
+        min-height: 1100px;
+    }
+    .about-section .about-section-content .about-buttons{
+        flex-direction: column;
+        margin: 0px auto;
+    }
+    .about-section .about-section-content .about-buttons .card{
+        width: 80vw;
+        height: 70vh;
+        min-height:400px;
+    }
 }
 @media screen and (min-width:800px) and (min-height:1100px){
     /* Styling button section (3) */
