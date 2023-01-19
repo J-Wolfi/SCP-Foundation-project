@@ -128,6 +128,7 @@ body{
     .nav .side-menu, .nav .side-menu-footer{
         visibility:hidden;
         position: absolute;
+        z-index: 1;
         right:0px;
         width:0vw;
         overflow:hidden;
@@ -340,7 +341,9 @@ body{
         list-style:none;
     }
     .about-section .about-section-content .about-buttons img{
-        opacity:0.8;
+        position: relative;
+        z-index: 0;
+        opacity:0.7;
         width: 30vw;
         height:40vh;
         min-height: 250px;
@@ -422,10 +425,12 @@ body{
         flex-direction: column;
         justify-content: center;
     }
+    .footer-content .footer-logo a, .footer-content .footer-logo img{
+        margin: 0px auto 10px auto;
+    }
     .footer-content .footer-logo img{
         height:45px;
         width:45px;
-        margin: 0px auto 10px auto;
     }
     .footer-content .line-horizontal{
         height:1px;
@@ -445,6 +450,9 @@ body{
     .footer-content .footer-links a{
         color: var(--fontcolor);
         text-decoration: none;
+        cursor: pointer;
+    }
+    footer a{
         cursor: pointer;
     }
         /* 2.4.1 Styling Footer Link */
